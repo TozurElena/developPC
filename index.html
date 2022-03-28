@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 
   <title>DevelopPC</title>
 </head>
@@ -20,17 +21,19 @@
       </a>
       <div class="header__menu">
         <nav class="header__nav">
-          <a href="#">Чем занимаемся</a>
-          <a href="#">Процесс работы</a>
-          <a href="#">Команда</a>
+          <a href="#section1">Чем занимаемся</a>
+          <a href="#section2">Процесс работы</a>
+          <a href="#section3">Команда</a>
         </nav>
-        <button type="button" class="button header__button">Оставить заявку</button>
+        <button type="button" class="button header__button modal__button">Оставить заявку</button>
       </div>
     </div>
   </header>
   <main class="main">
+    
     <section class="main-display">
       <div class="container">
+        
         <h1 class="main-display__header">Собираем игровой ПК  под ваш бюджет</h1>
         <div class="timer main-display__timer">
           <div class="timer__item">
@@ -51,19 +54,21 @@
           </div>
 
         </div>
-        <button class="button main-display__button">Оставить заявку</button>
+        <button class="button main-display__button modal__button">Оставить заявку</button>
       </div>
       <div class="main-display__background">
         <img src="img/main-screen.png" alt="">
       </div>
     </section>
     <section class="work">
+      <a name="section1"></a>
       <div class="container">
         <div class="work__wrap">
           <div class="work__img">
             <img src="img/about__img.jpg" alt="">
           </div>
           <div class="work__text">
+            
             <h2 class="work__header">Чем мы занимаемся</h2>
             <p class="work__description">Помогаем сэкономить до 40% стоимости игрового компьютера без потери производительности. Подбираем мощные детали
             компьютера, заказываем у своих поставщиков или напрямую у производителей, чтобы сэкономить ваши деньги. Собираем мощный
@@ -73,6 +78,7 @@
       </div>
     </section>
     <section class="process">
+      <a name="section2"></a>
       <div class="container">
         <div class="process__wrap">
           <div class="process__title">
@@ -109,6 +115,7 @@
       </div>
     </section>
     <section class="command">
+      <a name="section3"></a>
       <div class="container">
         <div class="process__title command__title">
           <div class="process__img">
@@ -149,7 +156,7 @@
         <div class="assembly__wrap">
           <h2 class="assembly__header">Закажите свою уникальную сборку</h2>
           <div class="assembly_description">Мы свяжемся с вами, чтобы уточнить детали заказа</div>
-          <button class="button assembly__button">Оставить заявку</button>
+          <button class="button assembly__button modal__button">Оставить заявку</button>
           <div class="assembly__socials">
             <div class="assembly__item">
               <img src="img/vk.svg" alt="">
@@ -167,6 +174,29 @@
         </div>
       </div>
     </section>
+
+    <form action="#" class="modal">
+      <div class="modal__inner">
+        <div class="modal__close">
+          <img src="img/cross.svg" alt="">
+        </div>
+        <h3 class="modal__header">Заявка на сборку ПК</h3>
+        <div class="modal__subheader">Мы свяжемся с вами, чтобы обсудить детали заказа</div>
+        <div class="modal__elements">
+          <div class="modal__item">
+            <input type="text" class="modal__input" placeholder="Как вас зовут">
+          </div>
+          <div class="modal__item">
+            <input type="tel" class="modal__input" placeholder="Номер телефона">
+          </div>
+          <div class="modal__item">
+            <input type="email" class="modal__input" placeholder="E-mail">
+          </div>
+          
+        </div>
+        <button type="submit" class="button main-display__button">Отправить</button>
+      </div>
+    </form>
   </main>
   
 </body>
